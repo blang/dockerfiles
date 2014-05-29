@@ -1,0 +1,101 @@
+{
+  "network": {
+    "api_key": "secretkey",
+    "localhost": "armaserver.example.com"
+  },
+  "gamemanager": {
+    "games": {
+      "a2": {
+        "cwd": "/arma",
+        "server_exe": "arma2oaserver.exe",
+        "server_params": [
+          "-server",
+          "-port=%PORT%",
+          "-config=%CONFIG%",
+          "-mod=arma2;Expansion;ca",
+          "-mod=%MODS%"
+        ],
+        "hc_exe": "arma2oa.exe",
+        "hc_params": [
+          "-client",
+          "-connect=127.0.0.1",
+          "-port=%PORT%",
+          "-password=%PASSWORD%",
+          "-nosound",
+          "-profiles=HC",
+          "-name=HC",
+          "-mod=arma2;Expansion;ca",
+          "-mod=%MODS%"
+        ],
+        "beta_mods": [
+          "@he_beta",
+          "@he_beta_unstable"
+        ]
+      },
+      "a3": {
+        "cwd": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Arma 3",
+        "server_exe": "arma3server.exe",
+        "server_params": [
+          "-server",
+          "-port=%PORT%",
+          "-config=%CONFIG%",
+          "-mod=%MODS%"
+        ],
+        "hc_exe": "arma3.exe",
+        "hc_params": [
+          "-client",
+          "-connect=127.0.0.1",
+          "-port=%PORT%",
+          "-password=%PASSWORD%",
+          "-nosound",
+          "-profiles=HC",
+          "-name=HC",
+          "-mod=%MODS%"
+        ],
+        "beta_mods": []
+      }
+    },
+    "instances": {
+      "a2server1": {
+        "name": "Internal A2 #1",
+        "gameconfig": "a2",
+        "configfile": "dev_config_hc.cfg",
+        "port": 2302,
+        "password": "password",
+        "servermods": "@smod1;@smod2",
+        "hcmods": "@hcmod1;@hcmod2",
+        "clientmods": "@clientmod1;@clientmod2"
+      },
+      "a2server2": {
+        "name": "Internal A2 #2",
+        "gameconfig": "a2",
+        "configfile": "dev_config_hc.cfg",
+        "port": 2303,
+        "password": "password",
+        "servermods": "@smod1;@smod2",
+        "hcmods": "@hcmod1;@hcmod2",
+        "clientmods": "@clientmod1;@clientmod2"
+      }
+    },
+    "extinstances": {
+      "ext1": {
+        "name": "External Server 1",
+        "game": "a2",
+        "host": "127.0.0.1",
+        "port": 2302,
+        "password": "pass",
+        "mods": "mod1;mod2",
+        "betamod": "beta"
+      },
+      "ext2": {
+        "name": "External Server 2",
+        "game": "a2",
+        "host": "127.0.0.1",
+        "port": 2315,
+        "password": "pass",
+        "mods": "mod1;mod2",
+        "betamod": "beta"
+      }
+    }
+  }
+}
