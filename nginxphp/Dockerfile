@@ -25,7 +25,7 @@ EXPOSE 443
 
 
 # Mounts
-VOLUME ["/data", "/etc/nginx/sites-enabled", "/etc/nginx/conf.d","/etc/php5/fpm/pool.d", /var/log"]
+VOLUME ["/data", "/etc/nginx/sites-enabled", "/etc/nginx/conf.d","/etc/php5/fpm/pool.d", "/var/log"]
 
 # Define working directory.
 WORKDIR /data
